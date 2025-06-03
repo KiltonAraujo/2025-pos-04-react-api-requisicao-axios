@@ -1,10 +1,15 @@
 import React, { useState } from 'react';
 
+export interface TarefaInterface {
+  id: number;
+  title: string;
+  completed: boolean;
+}
+
 interface ModalTarefaProps {
   onAddTarefa: (novaTarefa: string) => void;
   onClose: () => void;
 }
-
 
 const ModalTarefa: React.FC<ModalTarefaProps> = ({ onAddTarefa, onClose }) => {
   const [novaTarefa, setNovaTarefa] = useState('');
